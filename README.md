@@ -1,16 +1,19 @@
-# Salto com você!!!
+# ✈️ Salto com você!
 
-Site para uma empresa fictícia de **agencia de viagens**. 
+O **Salto com você!** é o website institucional de uma agência de viagens fictícia, projetado para apresentar destinos, pacotes turísticos e facilitar o contato com clientes.
 
 ---
 
-## ✨ O que o site faz
+## 🛠️ Tecnologias Utilizadas
 
+- **Front-end:** HTML5, CSS3 (Vanilla) e JavaScript (Vanilla JS)
+- **Back-end:** [Node.js](https://nodejs.org/) e [Express](https://expressjs.com/)
 
+---
 
-## 🗂️ Estrutura do projeto
+## 🗂️ Estrutura do Projeto
 
-```
+```text
 meu-projeto/
 ├── index.html
 ├── src/
@@ -19,17 +22,42 @@ meu-projeto/
 │   └── js/
 │       └── script.js
 ├── package.json
-└── README.md    
+└── README.md
+```
 
 ---
 
-## 🛠️ Tecnologias usadas
+## 🚀 Como Executar o Projeto
 
-- **Front-end**: HTML5, CSS3 (puro, sem framework) e JavaScript puro (Vanilla JS).
-- **Back-end**: [Node.js](https://nodejs.org) + [Express](https://expressjs.com).
-- **Banco de dados**: SQL, via [better-sqlite3](https://github.com/WiseLibs/better-sqlite3) — um banco SQL real, salvo em um único arquivo, sem precisar instalar um servidor de banco separado. Veja o `TUTORIAL.md` para instruções de como migrar para MySQL ou PostgreSQL, se preferir.
-- **Autenticação**: senha com hash [bcrypt](https://www.npmjs.com/package/bcryptjs) + token [JWT](https://jwt.io/) para proteger o cadastro de sabores.
+### Pré-requisitos
+Certifique-se de ter o [Git](https://git-scm.com/) e o [Node.js](https://nodejs.org/) instalados em sua máquina.
+
+### Passo a passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/Jimenez-1503/Somativa-FRONT_END.git
+   ```
+
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd Somativa-FRONT_END
+   ```
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Inicie o servidor:**
+   ```bash
+   npm start
+   ```
 
 ---
 
-## 🚀 Como rodar o projeto
+## 👥 Integrantes do Projeto
+
+- **Pedro da Silva Andres Jimenez**
+- **Rafael Teixeira**
+- **Vinicius de Souza Monteiro**
