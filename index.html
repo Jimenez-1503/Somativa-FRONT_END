@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ViajaMais | Passagens Aéreas e Pacotes de Viagem</title>
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Bootstrap 5.3 -->
@@ -23,102 +21,46 @@
 
     <!-- Topbar Informativa -->
     <div class="topbar">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="#">
-                        <i class="fa-solid fa-store"></i>
-                        Encontre uma loja
-                    </a>
-
-                    <a href="#">
-                        <i class="fa-solid fa-headset"></i>
-                        Central: (11) 3003-0000
-                    </a>
-                </div>
-
-                <a href="#">
-                    <i class="fa-regular fa-user"></i>
-                    Entre ou cadastre-se
-                </a>
+        <div class="container topbar-content">
+            <div class="topbar-links">
+                <a href="#"><i class="fa-solid fa-store"></i> Encontre uma loja</a>
+                <a href="#"><i class="fa-solid fa-headset"></i> Central: (11) 3003-0000</a>
+            </div>
+            <div class="topbar-user">
+                <a href="#"><i class="fa-regular fa-user"></i> Entre ou cadastre-se</a>
             </div>
         </div>
     </div>
 
     <!-- Header Principal -->
     <header class="header">
-        <nav class="navbar navbar-expand-md bg-white">
-            <div class="container">
+        <div class="container navbar">
+            <a href="#" class="logo">Viaja<span>Mais</span></a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#" class="nav-link"><i class="fa-solid fa-plane"></i> Passagens</a></li>
+                    <li><a href="#" class="nav-link"><i class="fa-solid fa-hotel"></i> Hotéis</a></li>
+                    <li><a href="#" class="nav-link"><i class="fa-solid fa-suitcase"></i> Pacotes</a></li>
+                    <li><a href="#" class="nav-link"><i class="fa-solid fa-ship"></i> Cruzeiros</a></li>
+                    <li><a href="#" class="nav-link"><i class="fa-solid fa-car"></i> Carros</a></li>
+                </ul>
+            </nav>
 
-                <a href="#" class="navbar-brand logo">
-                    Salto<span>comVocê</span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu"
-                    aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="nav-menu">
-                    <ul class="navbar-nav ms-auto mb-2 mb-md-0 gap-md-2">
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa-solid fa-plane"></i>
-                                Passagens
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa-solid fa-hotel"></i>
-                                Hotéis
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa-solid fa-suitcase"></i>
-                                Pacotes
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa-solid fa-ship"></i>
-                                Cruzeiros
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="fa-solid fa-car"></i>
-                                Carros
-                            </a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
     </header>
 
-    <!-- Banner Hero + Busca -->
+    <!-- Banner Hero & Widget de Busca -->
     <section class="hero-section">
         <div class="container">
-
             <div class="hero-banner">
                 <div class="hero-text">
-                    <h1 class="fw-bold">
-                        Passagens Aéreas Baratas para o Brasil e o Mundo
-                    </h1>
-
-                    <p class="mb-0">
-                        Encontre passagens com parcelamento facilitado e opções para os principais destinos no Festival
-                        de Viagens.
-                    </p>
+                    <h1>Passagens Aéreas Baratas para o Brasil e o Mundo</h1>
+                    <p>Encontre passagens com parcelamento facilitado e opções para os principais destinos no Festival de Viagens.</p>
                 </div>
-
                 <div class="hero-badge">
                     <i class="fa-solid fa-plane-departure"></i>
                 </div>
@@ -126,475 +68,233 @@
 
             <!-- Box de Pesquisa -->
             <div class="search-box">
-
-                <div class="d-flex flex-wrap gap-2 mb-4">
-                    <button type="button" class="tab-btn active" data-type="roundtrip">
-                        Ida e volta
-                    </button>
-
-                    <button type="button" class="tab-btn" data-type="one-way">
-                        Só ida
-                    </button>
-
-                    <button type="button" class="tab-btn" data-type="multi">
-                        Vários destinos
-                    </button>
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-type="roundtrip">Ida e volta</button>
+                    <button class="tab-btn" data-type="one-way">Só ida</button>
+                    <button class="tab-btn" data-type="multi">Vários destinos</button>
                 </div>
 
-                <form id="search-form">
-                    <div class="row g-3 align-items-end">
-
-                        <div class="col-12 col-md-6 col-lg">
-                            <label for="origem" class="form-label">
-                                <i class="fa-solid fa-location-dot"></i>
-                                Origem
-                            </label>
-
-                            <input type="text" id="origem" class="form-control" placeholder="Sua cidade" required>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg">
-                            <label for="destino" class="form-label">
-                                <i class="fa-solid fa-plane-arrival"></i>
-                                Destino
-                            </label>
-
-                            <input type="text" id="destino" class="form-control" placeholder="Para onde vai?" required>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg">
-                            <label for="data" class="form-label">
-                                <i class="fa-regular fa-calendar"></i>
-                                Ida / Volta
-                            </label>
-
-                            <input type="date" id="data" class="form-control" required>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg">
-                            <label for="passageiros" class="form-label">
-                                <i class="fa-solid fa-user-group"></i>
-                                Passageiros
-                            </label>
-
-                            <select id="passageiros" class="form-select">
-                                <option>1 Viajante, Econômica</option>
-                                <option>2 Viajantes, Econômica</option>
-                                <option>Família (4+), Econômica</option>
-                                <option>1 Viajante, Executiva</option>
-                            </select>
-                        </div>
-
-                        <div class="col-12 col-lg-auto">
-                            <button type="submit" class="btn btn-search w-100">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                BUSCAR
-                            </button>
-                        </div>
-
+                <form class="search-form" id="search-form">
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-location-dot"></i> Origem</label>
+                        <input type="text" placeholder="Sua cidade" required>
                     </div>
+
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-plane-arrival"></i> Destino</label>
+                        <input type="text" placeholder="Para onde vai?" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label><i class="fa-regular fa-calendar"></i> Ida / Volta</label>
+                        <input type="date" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-user-group"></i> Passageiros</label>
+                        <select>
+                            <option>1 Viajante, Econômica</option>
+                            <option>2 Viajantes, Econômica</option>
+                            <option>Familia (4+), Econômica</option>
+                            <option>1 Viajante, Executiva</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn-search"><i class="fa-solid fa-magnifying-glass"></i> BUSCAR</button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Seção Ofertas em Destaque -->
-    <section class="promocoes py-5">
+    <section class="promocoes">
         <div class="container">
-
             <div class="section-title">
-                <h2 class="fw-bold">Promoções de Passagens Aéreas</h2>
+                <h2>Promoções de Passagens Aéreas</h2>
                 <p>Aproveite os destinos mais procurados com até 40% de desconto!</p>
-            </div>
+            </header>
 
-            <div class="row g-4">
-
+            <div class="cards-grid">
                 <!-- Card 1 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card h-100 shadow-sm voo-card">
-
-                        <div class="position-relative">
-                            <img src="https://imgmd.net/image/upload/v1/guia/1713773.jpg"
-                                class="card-img-top voo-card-img" alt="Montevidéu">
-
-                            <span class="badge tag-cia position-absolute top-0 start-0 m-2">
-                                Voando Azul
-                            </span>
-
-                            <span class="badge tag-desconto position-absolute bottom-0 end-0 m-2">
-                                Até 30% OFF
-                            </span>
+                <div class="card-voo">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1589553460732-58ef7a11d952?auto=format&fit=crop&w=600&q=80" alt="Montevidéu">
+                        <span class="tag-cia">Voando Azul</span>
+                        <span class="tag-desconto">Até 30% OFF</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="type"><i class="fa-solid fa-plane"></i> Aéreo</span>
+                        <h3>Montevidéu</h3>
+                        <p class="origin">Saindo de São Paulo</p>
+                        <ul class="details">
+                            <li><i class="fa-solid fa-check"></i> Aéreo ida e volta</li>
+                            <li><i class="fa-solid fa-calendar-days"></i> Saída: 28/10/2026</li>
+                        </ul>
+                        <div class="price-container">
+                            <span class="price-label">a partir de</span>
+                            <div class="price">R$ 1.269</div>
+                            <span class="price-info">Por pessoa</span>
                         </div>
-
-                        <div class="card-body d-flex flex-column">
-                            <span class="type">
-                                <i class="fa-solid fa-plane"></i>
-                                Aéreo
-                            </span>
-
-                            <h3 class="card-title">Montevidéu</h3>
-                            <p class="origin">Saindo de São Paulo</p>
-
-                            <ul class="details">
-                                <li>
-                                    <i class="fa-solid fa-check"></i>
-                                    Aéreo ida e volta
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    Saída: 28/10/2026
-                                </li>
-                            </ul>
-
-                            <div class="price-container mt-auto">
-                                <span class="price-label">a partir de</span>
-                                <div class="price">R$ 1.269</div>
-                                <span class="price-info">Por pessoa</span>
-                            </div>
-
-                            <button type="button" class="btn btn-buy w-100 mb-2">
-                                Compre no Site
-                            </button>
-
-                            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-wsp w-100">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                Fale com a Loja
-                            </a>
-                        </div>
+                        <button class="btn-buy">Compre no Site</button>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i> Fale com a Loja</a>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card h-100 shadow-sm voo-card">
-
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80"
-                                class="card-img-top voo-card-img" alt="Bariloche">
-
-                            <span class="badge tag-cia position-absolute top-0 start-0 m-2">
-                                Voando Aerolíneas
-                            </span>
-
-                            <span class="badge tag-desconto position-absolute bottom-0 end-0 m-2">
-                                Até 30% OFF
-                            </span>
+                <div class="card-voo">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80" alt="Bariloche">
+                        <span class="tag-cia">Voando Aerolíneas</span>
+                        <span class="tag-desconto">Até 30% OFF</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="type"><i class="fa-solid fa-plane"></i> Aéreo</span>
+                        <h3>Bariloche</h3>
+                        <p class="origin">Saindo de São Paulo</p>
+                        <ul class="details">
+                            <li><i class="fa-solid fa-check"></i> Aéreo ida e volta</li>
+                            <li><i class="fa-solid fa-calendar-days"></i> Saída: 19/10/2026</li>
+                        </ul>
+                        <div class="price-container">
+                            <span class="price-label">a partir de</span>
+                            <div class="price">R$ 1.571</div>
+                            <span class="price-info">Por pessoa</span>
                         </div>
-
-                        <div class="card-body d-flex flex-column">
-                            <span class="type">
-                                <i class="fa-solid fa-plane"></i>
-                                Aéreo
-                            </span>
-
-                            <h3 class="card-title">Bariloche</h3>
-                            <p class="origin">Saindo de São Paulo</p>
-
-                            <ul class="details">
-                                <li>
-                                    <i class="fa-solid fa-check"></i>
-                                    Aéreo ida e volta
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    Saída: 19/10/2026
-                                </li>
-                            </ul>
-
-                            <div class="price-container mt-auto">
-                                <span class="price-label">a partir de</span>
-                                <div class="price">R$ 1.571</div>
-                                <span class="price-info">Por pessoa</span>
-                            </div>
-
-                            <button type="button" class="btn btn-buy w-100 mb-2">
-                                Compre no Site
-                            </button>
-
-                            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-wsp w-100">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                Fale com a Loja
-                            </a>
-                        </div>
+                        <button class="btn-buy">Compre no Site</button>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i> Fale com a Loja</a>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card h-100 shadow-sm voo-card">
-
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=600&q=80"
-                                class="card-img-top voo-card-img" alt="Salvador">
-
-                            <span class="badge tag-cia position-absolute top-0 start-0 m-2">
-                                Voando LATAM
-                            </span>
-
-                            <span class="badge tag-desconto position-absolute bottom-0 end-0 m-2">
-                                Voo Direto
-                            </span>
+                <div class="card-voo">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=600&q=80" alt="Salvador">
+                        <span class="tag-cia">Voando LATAM</span>
+                        <span class="tag-desconto">Voo Direto</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="type"><i class="fa-solid fa-plane"></i> Aéreo</span>
+                        <h3>Salvador</h3>
+                        <p class="origin">Saindo de São Paulo</p>
+                        <ul class="details">
+                            <li><i class="fa-solid fa-check"></i> Aéreo ida e volta</li>
+                            <li><i class="fa-solid fa-calendar-days"></i> Saída: 02/11/2026</li>
+                        </ul>
+                        <div class="price-container">
+                            <span class="price-label">a partir de</span>
+                            <div class="price">R$ 887</div>
+                            <span class="price-info">Por pessoa</span>
                         </div>
-
-                        <div class="card-body d-flex flex-column">
-                            <span class="type">
-                                <i class="fa-solid fa-plane"></i>
-                                Aéreo
-                            </span>
-
-                            <h3 class="card-title">Salvador</h3>
-                            <p class="origin">Saindo de São Paulo</p>
-
-                            <ul class="details">
-                                <li>
-                                    <i class="fa-solid fa-check"></i>
-                                    Aéreo ida e volta
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    Saída: 02/11/2026
-                                </li>
-                            </ul>
-
-                            <div class="price-container mt-auto">
-                                <span class="price-label">a partir de</span>
-                                <div class="price">R$ 887</div>
-                                <span class="price-info">Por pessoa</span>
-                            </div>
-
-                            <button type="button" class="btn btn-buy w-100 mb-2">
-                                Compre no Site
-                            </button>
-
-                            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-wsp w-100">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                Fale com a Loja
-                            </a>
-                        </div>
+                        <button class="btn-buy">Compre no Site</button>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i> Fale com a Loja</a>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card h-100 shadow-sm voo-card">
-
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&q=80"
-                                class="card-img-top voo-card-img" alt="Santiago">
-
-                            <span class="badge tag-cia position-absolute top-0 start-0 m-2">
-                                Voando Sky
-                            </span>
-
-                            <span class="badge tag-desconto position-absolute bottom-0 end-0 m-2">
-                                Até 30% OFF
-                            </span>
+                <div class="card-voo">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=600&q=80" alt="Santiago">
+                        <span class="tag-cia">Voando Sky</span>
+                        <span class="tag-desconto">Até 30% OFF</span>
+                    </div>
+                    <div class="card-body">
+                        <span class="type"><i class="fa-solid fa-plane"></i> Aéreo</span>
+                        <h3>Santiago</h3>
+                        <p class="origin">Saindo de São Paulo</p>
+                        <ul class="details">
+                            <li><i class="fa-solid fa-check"></i> Aéreo ida e volta</li>
+                            <li><i class="fa-solid fa-calendar-days"></i> Saída: 01/11/2026</li>
+                        </ul>
+                        <div class="price-container">
+                            <span class="price-label">a partir de</span>
+                            <div class="price">R$ 1.288</div>
+                            <span class="price-info">Por pessoa</span>
                         </div>
-
-                        <div class="card-body d-flex flex-column">
-                            <span class="type">
-                                <i class="fa-solid fa-plane"></i>
-                                Aéreo
-                            </span>
-
-                            <h3 class="card-title">Santiago</h3>
-                            <p class="origin">Saindo de São Paulo</p>
-
-                            <ul class="details">
-                                <li>
-                                    <i class="fa-solid fa-check"></i>
-                                    Aéreo ida e volta
-                                </li>
-                                <li>
-                                    <i class="fa-solid fa-calendar-days"></i>
-                                    Saída: 01/11/2026
-                                </li>
-                            </ul>
-
-                            <div class="price-container mt-auto">
-                                <span class="price-label">a partir de</span>
-                                <div class="price">R$ 1.288</div>
-                                <span class="price-info">Por pessoa</span>
-                            </div>
-
-                            <button type="button" class="btn btn-buy w-100 mb-2">
-                                Compre no Site
-                            </button>
-
-                            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-wsp w-100">
-                                <i class="fa-brands fa-whatsapp"></i>
-                                Fale com a Loja
-                            </a>
-                        </div>
+                        <button class="btn-buy">Compre no Site</button>
+                        <a href="https://wa.me/5511999999999" target="_blank" class="btn-wsp"><i class="fa-brands fa-whatsapp"></i> Fale com a Loja</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Seção Guia de Destinos -->
-    <section class="destinos-info py-5">
+    <section class="destinos-info">
         <div class="container">
-
             <div class="section-title">
-                <h2 class="fw-bold">Saiba mais sobre alguns destinos</h2>
+                <h2>Saiba mais sobre alguns destinos</h2>
             </div>
 
-            <div class="row g-4">
-
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-uppercase fw-bold">
-                                Porto Seguro - BA
-                            </h5>
-
-                            <p class="card-text">
-                                Uma combinação de tudo que remete à Bahia: extensas faixas de areia,
-                                banhos de mar tranquilos para quem quer descansar, praias badaladas
-                                e gastronomia autêntica.
-                            </p>
-
-                            <a href="#" class="btn btn-primary mt-auto">
-                                Saiba mais
-                            </a>
-                        </div>
-                    </div>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>PORTO SEGURO - BA</h3>
+                    <p>Uma combinação de tudo que remete à Bahia: extensas faixas de areia, banhos de mar tranquilos para quem quer descansar, praias badaladas e gastronomia autêntica.</p>
+                    <a href="#">Saiba mais sobre Porto Seguro <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-uppercase fw-bold">
-                                Recife - PE
-                            </h5>
-
-                            <p class="card-text">
-                                Recife é muito mais que um destino de praias no Nordeste. Palco da
-                                ocupação holandesa no século 17, a cidade é repleta de atrações
-                                históricas e cultura fervilhante.
-                            </p>
-
-                            <a href="#" class="btn btn-primary mt-auto">
-                                Saiba mais
-                            </a>
-                        </div>
-                    </div>
+                <div class="info-card">
+                    <h3>RECIFE - PE</h3>
+                    <p>Recife é muito mais que um destino de praias no Nordeste. Palco da ocupação holandesa no século 17, a cidade é repleta de atrações históricas e cultura fervilhante.</p>
+                    <a href="#">Saiba mais sobre Recife <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-uppercase fw-bold">
-                                São Paulo - SP
-                            </h5>
-
-                            <p class="card-text">
-                                Provar sabores dos quatro cantos do mundo, assistir a shows
-                                inesquecíveis, visitar algumas das melhores exposições do país
-                                e curtir uma vida noturna agitada!
-                            </p>
-
-                            <a href="#" class="btn btn-primary mt-auto">
-                                Saiba mais
-                            </a>
-                        </div>
-                    </div>
+                <div class="info-card">
+                    <h3>SÃO PAULO - SP</h3>
+                    <p>Provar sabores dos quatro cantos do mundo, assistir a shows inesquecíveis, visitar algumas das melhores exposições do país e curtir uma vida noturna agitada!</p>
+                    <a href="#">Saiba mais sobre São Paulo <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-uppercase fw-bold">
-                                Portugal
-                            </h5>
-
-                            <p class="card-text">
-                                Na hora de planejar seu roteiro para Portugal, vale lembrar que
-                                dá para ir muito além de andar de bondinho pelas ladeiras de
-                                Lisboa e experimentar ótimos vinhos no Porto.
-                            </p>
-
-                            <a href="#" class="btn btn-primary mt-auto">
-                                Saiba mais
-                            </a>
-                        </div>
-                    </div>
+                <div class="info-card">
+                    <h3>PORTUGAL</h3>
+                    <p>Na hora de planejar seu roteiro para Portugal, vale lembrar que dá para ir muito além de andar de bondinho pelas ladeiras de Lisboa e experimentar ótimos vinhos no Porto.</p>
+                    <a href="#">Saiba mais sobre Portugal <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float"
-        aria-label="Fale conosco pelo WhatsApp">
+    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <!-- Rodapé -->
     <footer class="footer">
-        <div class="container">
-
-            <div class="row g-4">
-
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <h4>SaltocomVocê</h4>
-
-                    <ul>
-                        <li><a href="#">Sobre nós</a></li>
-                        <li><a href="#">Trabalhe Conosco</a></li>
-                        <li><a href="#">Seja um Franqueado</a></li>
-                    </ul>
+        <div class="container footer-grid">
+            <div>
+                <h4>ViajaMais Brasil</h4>
+                <ul>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                    <li><a href="#">Seja um Franqueado</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Central de Atendimento</h4>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Cancelamentos</a></li>
+                    <li><a href="#">Reclamações</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Termos e Políticas</h4>
+                <ul>
+                    <li><a href="#">Condições de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Siga-nos</h4>
+                <div class="social flex">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
                 </div>
-
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <h4>Central de Atendimento</h4>
-
-                    <ul>
-                        <li><a href="#">Central de Ajuda</a></li>
-                        <li><a href="#">Cancelamentos</a></li>
-                        <li><a href="#">Reclamações</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <h4>Termos e Políticas</h4>
-
-                    <ul>
-                        <li><a href="#">Condições de Uso</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <h4>Siga-nos</h4>
-
-                    <div class="d-flex gap-3 social">
-                        <a href="#" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-
-                        <a href="#" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-                        <a href="#" aria-label="YouTube">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
-
         <div class="footer-bottom">
-            <div class="container">
-                <p class="mb-0">
-                    &copy; 2026 ViajaMais Agência de Viagens S.A. Todos os direitos reservados.
-                </p>
-            </div>
+            <p>&copy; 2026 ViajaMais Agência de Viagens S.A. Todos os direitos reservados.</p>
         </div>
     </footer>
 
