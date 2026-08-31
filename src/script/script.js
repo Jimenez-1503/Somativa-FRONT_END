@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Alternar Menu Mobile
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+    const menuToggle = document.querySelector('#menu-toggle');
+    const navMenu = document.querySelector('#nav-menu');
 
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
@@ -38,4 +38,18 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Redirecionando para a etapa de pagamento e reserva...');
         });
     });
+
+    // 5. Ação do Botão "Secreto"
+    const botaoSegredo = document.querySelector(".botao-segredo");
+    const secaoSegredo = document.querySelector("#segredo");
+
+    botaoSegredo.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        secaoSegredo.classList.remove("d-none");
+
+        secaoSegredo.scrollIntoView({
+        behavior: "smooth"
+    });
+});
 });
